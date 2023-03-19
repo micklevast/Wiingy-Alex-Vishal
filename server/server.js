@@ -1,8 +1,10 @@
 const express = require("express");
 const app = express();
-require("dotenv").config();
+const PORT = 5000;
+const BACKEND_URL = "http://localhost"
+// require("dotenv").config();
 // desctructure the variables from .env file
-const { PORT, BACKEND_URL } = process.env;
+// const { PORT, BACKEND_URL } = process.env;
 
 // cross origin resource sharing
 // const cors = require('cors');
@@ -20,4 +22,4 @@ const videoRoutes = require("./routes/api/videos");
 app.use("/api/videos", videoRoutes);
 // app.use("/", commentRoute)
 // start the server and listen on port 5000
-app.listen(PORT, () => {});
+app.listen(PORT, () => { });
